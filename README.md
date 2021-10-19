@@ -1,6 +1,6 @@
 # Whatsagram-LBianchi
 ## | TODO list |
 - [x] Funcionalidad Teclas
-- [ ] Enviar texto a textArea
+- [x] Enviar texto a missageArea
 - [ ] Crear Interfaz
 - [ ] Emojis

@@ -1,9 +1,14 @@
 var mayus = 1;
 
 function enviar() {
-    console.log(document.getElementById("mensaje").value);
-    document.getElementById("mensaje").value = "";
-    mayus = 1
+    if (document.getElementById("mensaje").value.trim() != "") {
+        var mensaje = document.createElement("p");
+        var enviado = document.createTextNode(document.getElementById("mensaje").value);
+        mensaje.appendChild(enviado);
+        document.getElementById("messagingArea").appendChild(mensaje);
+        document.getElementById("mensaje").value = "";
+        mayus = 1
+    }
 }
 
 function mandarLetra(letra) {
