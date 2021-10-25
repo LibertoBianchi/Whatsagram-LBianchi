@@ -1,0 +1,58 @@
+.grid-container {
+    grid-template-rows: 450px 50px 100px;
+    display: grid;
+    justify-content: center;
+    align-items: start;
+    grid-gap: 20px;
+}
+
+.messagingArea {}
+
+.messagingArea {
+    display: grid;
+    overflow-y: scroll;
+    align-items: start;
+    justify-items: end;
+}
+
+.messagingArea p {
+    margin-top: 5px;
+    display: grid;
+    background-color: rgb(238, 238, 238);
+    justify-content: end;
+    border-radius: 8px;
+    align-content: flex-end;
+    order: 1;
+    box-sizing: content-box;
+    border: solid #5f5f5f 2px;
+    padding: 5px;
+}
+
+.keyboardArea {
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.textArea {}
+
+.keyboard-item{
+    margin: 0;
+    display: flex;
+    
+    flex-grow: 0;
+}
+input[type="button"] {
+    
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    text-align: center;
+    color: #555;
+    cursor: pointer;
+    border-color: #111111;
+    border-style: solid;
+    border-radius: 5px;
+}

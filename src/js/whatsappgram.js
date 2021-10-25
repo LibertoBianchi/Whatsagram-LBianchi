@@ -37,6 +37,7 @@ function eliminarCaracter(a) {
 
 function limpiarTexto() {
     document.getElementById("mensaje").value = "";
+    mayus=1;
 }
 
 function eliminarUltimaPalabra() {

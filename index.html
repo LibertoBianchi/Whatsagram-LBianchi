@@ -11,52 +11,69 @@
 </head>
 
 <body>
-    <div id="messagingArea"></div>
+    <div class="grid-container">
+        <div id="messagingArea" class="messagingArea"></div>
 
-    <div id="textArea">
-        <textarea id="mensaje"></textarea>
+        <div id="textArea" class="textArea">
+            <textarea id="mensaje"></textarea>
+            <input type="submit" onclick="enviar()"><br>
+        </div>
+
+        <div id="keyboardArea" class="keyboardArea">
+            <div class="keyboard-item keyboard-item-1">
+                <input type="button" value="q" onclick="mandarLetra('q')">
+                <input type="button" value="w" onclick="mandarLetra('w')">
+                <input type="button" value="e" onclick="mandarLetra('e')">
+                <input type="button" value="r" onclick="mandarLetra('r')">
+                <input type="button" value="t" onclick="mandarLetra('t')">
+                <input type="button" value="y" onclick="mandarLetra('y')">
+                <input type="button" value="u" onclick="mandarLetra('u')">
+                <input type="button" value="i" onclick="mandarLetra('i')">
+                <input type="button" value="o" onclick="mandarLetra('o')">
+                <input type="button" value="p" onclick="mandarLetra('p')">
+            </div>
+
+            <div class="keyboard-item keyboard-item-2">
+                <input type="button" value="a" onclick="mandarLetra('a')">
+                <input type="button" value="s" onclick="mandarLetra('s')">
+                <input type="button" value="d" onclick="mandarLetra('d')">
+                <input type="button" value="f" onclick="mandarLetra('f')">
+                <input type="button" value="g" onclick="mandarLetra('g')">
+                <input type="button" value="h" onclick="mandarLetra('h')">
+                <input type="button" value="j" onclick="mandarLetra('j')">
+                <input type="button" value="k" onclick="mandarLetra('k')">
+                <input type="button" value="l" onclick="mandarLetra('l')">
+                <input type="button" value="ñ" onclick="mandarLetra('ñ')">
+            </div>
+
+            <div class="keyboard-item keyboard-item-3">
+                <input type="button" value="Mayus" onclick="mayuscula()">
+                <input type="button" value="z" onclick="mandarLetra('z')">
+                <input type="button" value="x" onclick="mandarLetra('x')">
+                <input type="button" value="c" onclick="mandarLetra('c')">
+                <input type="button" value="v" onclick="mandarLetra('v')">
+                <input type="button" value="b" onclick="mandarLetra('b')">
+                <input type="button" value="n" onclick="mandarLetra('n')">
+                <input type="button" value="m" onclick="mandarLetra('m')">
+
+
+            </div>
+
+            <div class="keyboard-item keyboard-item-4">
+
+                <input type="button" value="," onclick="mandarLetra(',')">
+
+                <input type="button" value="->" onclick="eliminarCaracter('atras')">
+                <input type="button" value="Espacio" onclick="mandarLetra(' ')">
+                <input type="button" value="<-" onclick="eliminarCaracter('delante')">
+                <input type="button" value="." onclick="mandarLetra('.')">
+                <input type="button" value="C" onclick="limpiarTexto()">
+                <input type="button" value="CE" onclick="eliminarUltimaPalabra()">
+
+
+            </div>
+        </div>
     </div>
-
-    <div id="keyboardArea">
-        <input type="submit" onclick="enviar()"><br>
-        <input type="button" value="q" onclick="mandarLetra('q')">
-        <input type="button" value="w" onclick="mandarLetra('w')">
-        <input type="button" value="e" onclick="mandarLetra('e')">
-        <input type="button" value="r" onclick="mandarLetra('r')">
-        <input type="button" value="t" onclick="mandarLetra('t')">
-        <input type="button" value="y" onclick="mandarLetra('y')">
-        <input type="button" value="u" onclick="mandarLetra('u')">
-        <input type="button" value="i" onclick="mandarLetra('i')">
-        <input type="button" value="o" onclick="mandarLetra('o')">
-        <input type="button" value="p" onclick="mandarLetra('p')"><br>
-        <input type="button" value="a" onclick="mandarLetra('a')">
-        <input type="button" value="s" onclick="mandarLetra('s')">
-        <input type="button" value="d" onclick="mandarLetra('d')">
-        <input type="button" value="f" onclick="mandarLetra('f')">
-        <input type="button" value="g" onclick="mandarLetra('g')">
-        <input type="button" value="h" onclick="mandarLetra('h')">
-        <input type="button" value="j" onclick="mandarLetra('j')">
-        <input type="button" value="k" onclick="mandarLetra('k')">
-        <input type="button" value="l" onclick="mandarLetra('l')">
-        <input type="button" value="ñ" onclick="mandarLetra('ñ')"><br>
-        <input type="button" value="z" onclick="mandarLetra('z')">
-        <input type="button" value="x" onclick="mandarLetra('x')">
-        <input type="button" value="c" onclick="mandarLetra('c')">
-        <input type="button" value="v" onclick="mandarLetra('v')">
-        <input type="button" value="b" onclick="mandarLetra('b')">
-        <input type="button" value="n" onclick="mandarLetra('n')">
-        <input type="button" value="m" onclick="mandarLetra('m')">
-        <input type="button" value="," onclick="mandarLetra(',')">
-        <input type="button" value="." onclick="mandarLetra('.')">
-        <input type="button" value="Espacio" onclick="mandarLetra(' ')">
-        <input type="button" value="br" onclick="saltoLinea()">
-        <input type="button" value="<-" onclick="eliminarCaracter('delante')">
-        <input type="button" value="->" onclick="eliminarCaracter('atras')">
-        <input type="button" value="C" onclick="limpiarTexto()">
-        <input type="button" value="CE" onclick="eliminarUltimaPalabra()">
-        <input type="button" value="Mayus" onclick="mayuscula()">
-    </div>
-
 
 </body>
 
