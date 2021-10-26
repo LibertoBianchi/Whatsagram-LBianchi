@@ -1,18 +1,23 @@
 .grid-container {
-    grid-template-rows: 450px 50px 100px;
+    grid-template-rows: 73vh auto auto;
+    grid-template-columns: auto;
     display: grid;
     justify-content: center;
     align-items: start;
-    grid-gap: 20px;
+    
+    background-color: rgb(226, 226, 226);
+    border-radius: 5px;
 }
 
-.messagingArea {}
+.messagingArea {
+}
 
 .messagingArea {
     display: grid;
-    overflow-y: scroll;
+    overflow :auto;
     align-items: start;
     justify-items: end;
+    max-height: 70vh;
 }
 
 .messagingArea p {
@@ -31,28 +36,40 @@
 .keyboardArea {
     display: flex;
     align-self: center;
+    background-color: rgba(49, 49, 49, 0.747);
     flex-wrap: wrap;
     justify-content: center;
-    flex-direction: row;
+    border-radius: 5px;
 }
 
-.textArea {}
+.textArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textArea #mensaje{
+    width: 270px;
+    resize: none;
+    border-color: #404040;
+    border-width: 2px;
+    border-radius: 15px;
+}
 
-.keyboard-item{
+.keyboard-item {
     margin: 0;
     display: flex;
-    
-    flex-grow: 0;
+    flex-grow: 1;
+    width: 80%;
+    justify-content: center;
 }
+
 input[type="button"] {
-    
-    width: auto;
-    height: auto;
-    box-sizing: border-box;
-    text-align: center;
-    color: #555;
-    cursor: pointer;
-    border-color: #111111;
-    border-style: solid;
-    border-radius: 5px;
+    border-radius: 6px;
+    width: 32px;
+    height: 29px;
+    font-size: 13px;
+}
+
+#keyboardArea .espacio {
+    width: 125px;
 }

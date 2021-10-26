@@ -15,8 +15,12 @@
         <div id="messagingArea" class="messagingArea"></div>
 
         <div id="textArea" class="textArea">
+            <div class="textItem textItem-1">
             <textarea id="mensaje"></textarea>
+        </div>
+        <div class="textItem textItem-2">
             <input type="submit" onclick="enviar()"><br>
+        </div>
         </div>
 
         <div id="keyboardArea" class="keyboardArea">
@@ -64,7 +68,7 @@
                 <input type="button" value="," onclick="mandarLetra(',')">
 
                 <input type="button" value="->" onclick="eliminarCaracter('atras')">
-                <input type="button" value="Espacio" onclick="mandarLetra(' ')">
+                <input type="button" class="espacio" value="" onclick="mandarLetra(' ')">
                 <input type="button" value="<-" onclick="eliminarCaracter('delante')">
                 <input type="button" value="." onclick="mandarLetra('.')">
                 <input type="button" value="C" onclick="limpiarTexto()">
