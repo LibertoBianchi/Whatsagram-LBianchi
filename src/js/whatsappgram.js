@@ -45,7 +45,7 @@ function eliminarUltimaPalabra() {
     var ultimoEspacio = texto.lastIndexOf(" ");
     document.getElementById("mensaje").value = texto.substring(0, ultimoEspacio);
 }
-
+//⇪ ⇧
 function mayuscula() {
     if (mayus == 0) {
         mayus = 1

@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200;1,400&display=swap');
+        </style>
+
     <script src="src\js\whatsappgram.js"></script>
     <link rel="stylesheet" href="src\css\estilos.css">
     <title>whatsappgram LBianchi</title>
@@ -15,11 +20,15 @@
         <div id="messagingArea" class="messagingArea"></div>
 
         <div id="textArea" class="textArea">
+            <div class="textItem textItem-3">
+                <input type="submit" value="☻" id="emoji"><br>
+            </div>
+
             <div class="textItem textItem-1">
             <textarea id="mensaje"></textarea>
         </div>
         <div class="textItem textItem-2">
-            <input type="submit" onclick="enviar()"><br>
+            <input type="submit" onclick="enviar()" id="enviar" value="⮌"><br>
         </div>
         </div>
 
@@ -51,7 +60,7 @@
             </div>
 
             <div class="keyboard-item keyboard-item-3">
-                <input type="button" value="Mayus" onclick="mayuscula()">
+                <input type="button" value="⇧" onclick="mayuscula()">
                 <input type="button" value="z" onclick="mandarLetra('z')">
                 <input type="button" value="x" onclick="mandarLetra('x')">
                 <input type="button" value="c" onclick="mandarLetra('c')">
@@ -67,13 +76,13 @@
 
                 <input type="button" value="," onclick="mandarLetra(',')">
 
-                <input type="button" value="->" onclick="eliminarCaracter('atras')">
+                <input type="button" value="→" onclick="eliminarCaracter('atras')">
                 <input type="button" class="espacio" value="" onclick="mandarLetra(' ')">
-                <input type="button" value="<-" onclick="eliminarCaracter('delante')">
+                <input type="button" value="←" onclick="eliminarCaracter('delante')">
                 <input type="button" value="." onclick="mandarLetra('.')">
                 <input type="button" value="C" onclick="limpiarTexto()">
                 <input type="button" value="CE" onclick="eliminarUltimaPalabra()">
-
+                <input type="button" value="↵" onclick="saltoLinea()">
 
             </div>
         </div>
