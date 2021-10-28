@@ -1,5 +1,6 @@
 var mayus = 1;
 
+
 function enviar() {
     if (document.getElementById("mensaje").value.trim() != "") {
         var mensaje = document.createElement("p");
@@ -37,7 +38,7 @@ function eliminarCaracter(a) {
 
 function limpiarTexto() {
     document.getElementById("mensaje").value = "";
-    mayus=1;
+    mayus = 1;
 }
 
 function eliminarUltimaPalabra() {
@@ -49,9 +50,17 @@ function eliminarUltimaPalabra() {
 function mayuscula() {
     if (mayus == 0) {
         mayus = 1
+        document.getElementById("mayus").value = "⇪"
     } else if (mayus == 1) {
         mayus = 2
+        document.getElementById("mayus").classList.add('mayusPerma');
+
+
     } else if (mayus == 2) {
         mayus = 0
+        document.getElementById("mayus").classList.remove('mayusPerma');
+        document.getElementById("mayus").value = "⇧"
+    
+        document.getElementsByTagName('input[type=button]').style.textTransform = "lowercase"
     }
 }
