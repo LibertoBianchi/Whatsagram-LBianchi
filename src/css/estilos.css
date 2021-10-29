@@ -13,8 +13,6 @@ body {
     border-radius: 5px;
 }
 
-.messagingArea {}
-
 .messagingArea {
     display: grid;
     overflow: auto;
@@ -38,17 +36,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.keyboardArea {
-    display: flex;
-    align-self: center;
-    background-color: rgba(49, 49, 49, 0.747);
-    flex-wrap: wrap;
-    justify-content: center;
-    border-radius: 5px;
-    height: 22vh;
-    align-items: center;
-}
-
 .textArea {
     display: flex;
     justify-content: center;
@@ -68,6 +55,13 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.textArea #emojiButton {
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    border-radius: 5vw;
+}
+
 .textArea #enviar {
     height: 40px;
     width: 40px;
@@ -75,11 +69,42 @@ body {
     border-radius: 5vw;
 }
 
-.textArea #emoji {
-    height: 40px;
-    width: 40px;
-    font-size: 20px;
-    border-radius: 5vw;
+.emojiAreaInv {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    margin-top: 76vh;
+    width: 100vw;
+    height: 23vh;
+    border-radius: 5px;
+    background-color: rgb(88, 88, 88);
+    align-items: center;
+    justify-content: center;
+}
+
+.emojiAreaVis{
+    opacity: 100;
+    position: absolute;
+    display: flex;
+    margin-top: 76vh;
+    width: 100vw;
+    height: 23vh;
+    border-radius: 5px;
+    background-color: rgba(88, 88, 88);
+    align-items: center;
+    justify-content: center;
+}
+
+.keyboardArea {
+    display: flex;
+    align-self: center;
+    background-color: rgba(49, 49, 49, 0.747);
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 5px;
+    height: 22vh;
+    align-items: center;
+    
 }
 
 .keyboard-item {
@@ -96,16 +121,16 @@ input[type="button"] {
     height: 5vh;
     font-family: 'Poppins', sans-serif;
     font-size: 2.6vh;
-    
 }
 
 #keyboardArea .espacio {
     width: 125px;
 }
-.mayusPerma{
+
+.mayusPerma {
     background-color: rgb(59, 59, 59);
 }
 
-.keyboardMinus{
-    text-transform: lowercase;
+.fechas{
+    background-color:black ;
 }

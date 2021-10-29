@@ -8,7 +8,7 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200;1,400&display=swap');
-        </style>
+    </style>
 
     <script src="src\js\whatsappgram.js"></script>
     <link rel="stylesheet" href="src\css\estilos.css">
@@ -21,53 +21,67 @@
 
         <div id="textArea" class="textArea">
             <div class="textItem textItem-3">
-                <input type="submit" value="☻" id="emoji"><br>
+                <input type="submit" value="☻" id="emojiButton" onclick="verEmoji()"><br>
             </div>
 
             <div class="textItem textItem-1">
-            <textarea id="mensaje"></textarea>
+                <textarea id="mensaje"></textarea>
+            </div>
+            <div class="textItem textItem-2">
+                <input type="submit" onclick="enviar()" id="enviar" value="⮌"><br>
+            </div>
         </div>
-        <div class="textItem textItem-2">
-            <input type="submit" onclick="enviar()" id="enviar" value="⮌"><br>
-        </div>
+
+        <div id="emojiArea" class="emojiAreaInv">
+
+            <input type="button" value="😀" class="letra" onclick="mandarLetra('😀')">
+            <input type="button" value="🤣" class="letra" onclick="mandarLetra('🤣')">
+            <input type="button" value="😅" class="letra" onclick="mandarLetra('😅')">
+            <input type="button" value="😐" class="letra" onclick="mandarLetra('😐')">
+            <input type="button" value="😣" class="letra" onclick="mandarLetra('😣')">
+            <input type="button" value="😙" class="letra" onclick="mandarLetra('😙')">
+            <input type="button" value="😛" class="letra" onclick="mandarLetra('😛')">
+            <input type="button" value="🥱" class="letra" onclick="mandarLetra('🥱')">
+            <input type="button" value="😴" class="letra" onclick="mandarLetra('😴')">
+            <input type="button" value="🙄" class="letra" onclick="mandarLetra('🙄')">
         </div>
 
         <div id="keyboardArea" class="keyboardArea">
             <div class="keyboard-item keyboard-item-1">
-                <input type="button" value="Q" id="letra" onclick="mandarLetra('q')">
-                <input type="button" value="W" id="letra" onclick="mandarLetra('w')">
-                <input type="button" value="E" id="letra" onclick="mandarLetra('e')">
-                <input type="button" value="R" id="letra" onclick="mandarLetra('r')">
-                <input type="button" value="T" id="letra" onclick="mandarLetra('t')">
-                <input type="button" value="Y" id="letra" onclick="mandarLetra('y')">
-                <input type="button" value="U" id="letra" onclick="mandarLetra('u')">
-                <input type="button" value="I" id="letra" onclick="mandarLetra('i')">
-                <input type="button" value="O" id="letra" onclick="mandarLetra('o')">
-                <input type="button" value="P" id="letra" onclick="mandarLetra('p')">
+                <input type="button" value="Q" class="letra" onclick="mandarLetra('q')">
+                <input type="button" value="W" class="letra" onclick="mandarLetra('w')">
+                <input type="button" value="E" class="letra" onclick="mandarLetra('e')">
+                <input type="button" value="R" class="letra" onclick="mandarLetra('r')">
+                <input type="button" value="T" class="letra" onclick="mandarLetra('t')">
+                <input type="button" value="Y" class="letra" onclick="mandarLetra('y')">
+                <input type="button" value="U" class="letra" onclick="mandarLetra('u')">
+                <input type="button" value="I" class="letra" onclick="mandarLetra('i')">
+                <input type="button" value="O" class="letra" onclick="mandarLetra('o')">
+                <input type="button" value="P" class="letra" onclick="mandarLetra('p')">
             </div>
 
             <div class="keyboard-item keyboard-item-2">
-                <input type="button" value="A" id="letra" onclick="mandarLetra('a')">
-                <input type="button" value="S" id="letra" onclick="mandarLetra('s')">
-                <input type="button" value="D" id="letra" onclick="mandarLetra('d')">
-                <input type="button" value="F" id="letra" onclick="mandarLetra('f')">
-                <input type="button" value="G" id="letra" onclick="mandarLetra('g')">
-                <input type="button" value="H" id="letra" onclick="mandarLetra('h')">
-                <input type="button" value="J" id="letra" onclick="mandarLetra('j')">
-                <input type="button" value="K" id="letra" onclick="mandarLetra('k')">
-                <input type="button" value="L" id="letra" onclick="mandarLetra('l')">
-                <input type="button" value="Ñ" id="letra" onclick="mandarLetra('ñ')">
+                <input type="button" value="A" class="letra" onclick="mandarLetra('a')">
+                <input type="button" value="S" class="letra" onclick="mandarLetra('s')">
+                <input type="button" value="D" class="letra" onclick="mandarLetra('d')">
+                <input type="button" value="F" class="letra" onclick="mandarLetra('f')">
+                <input type="button" value="G" class="letra" onclick="mandarLetra('g')">
+                <input type="button" value="H" class="letra" onclick="mandarLetra('h')">
+                <input type="button" value="J" class="letra" onclick="mandarLetra('j')">
+                <input type="button" value="K" class="letra" onclick="mandarLetra('k')">
+                <input type="button" value="L" class="letra" onclick="mandarLetra('l')">
+                <input type="button" value="Ñ" class="letra" onclick="mandarLetra('ñ')">
             </div>
 
             <div class="keyboard-item keyboard-item-3">
-                <input type="button" value="⇪" id="mayus"  onclick="mayuscula()">
-                <input type="button" value="Z" id="letra" onclick="mandarLetra('z')">
-                <input type="button" value="X" id="letra" onclick="mandarLetra('x')">
-                <input type="button" value="C" id="letra" onclick="mandarLetra('c')">
-                <input type="button" value="V" id="letra" onclick="mandarLetra('v')">
-                <input type="button" value="B" id="letra" onclick="mandarLetra('b')">
-                <input type="button" value="N" id="letra" onclick="mandarLetra('n')">
-                <input type="button" value="M" id="letra" onclick="mandarLetra('m')">
+                <input type="button" value="⇪" id="mayus" onclick="mayuscula()">
+                <input type="button" value="Z" class="letra" onclick="mandarLetra('z')">
+                <input type="button" value="X" class="letra" onclick="mandarLetra('x')">
+                <input type="button" value="C" class="letra" onclick="mandarLetra('c')">
+                <input type="button" value="V" class="letra" onclick="mandarLetra('v')">
+                <input type="button" value="B" class="letra" onclick="mandarLetra('b')">
+                <input type="button" value="N" class="letra" onclick="mandarLetra('n')">
+                <input type="button" value="M" class="letra" onclick="mandarLetra('m')">
 
 
             </div>
