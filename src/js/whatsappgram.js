@@ -8,31 +8,31 @@ function enviar() {
     var horaMsj = fecha.getHours() + ":" + fecha.getMinutes();
     var horaTxt = horaMsj.toLocaleString();
 
+    if (fecha.getMinutes < 10) {
+        horaMsj = fecha.getHours() + ":" + "0" + fecha.getMinutes()
+
+    }
+
     var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
 
     var diaMes = new Date();
-    diaMes = "<p class="+"fechas"+">"+(diaMes.getDate()+" de "+meses[diaMes.getMonth()]).toLocaleString()+"</p>";
+    diaMes = "<h1 class=" + "fechas" + ">" + (diaMes.getDate() + " de " + meses[diaMes.getMonth()]).toLocaleString() + "</h1>";
 
-if(fechaControl==0){
-    
-    document.getElementById("messagingArea").innerHTML = diaMes
-    fecha++
-}
+    if (fechaControl == 0) {
+
+        document.getElementById("messagingArea").innerHTML += diaMes
+        fechaControl++
+    }
 
     if (document.getElementById("mensaje").value.trim() != "") {
         var mensaje = document.createElement("p");
-        var horaEnv = document.createElement("span")
-        var enviado = document.createTextNode(document.getElementById("mensaje").value + " " + horaTxt);
-        var horaNodo = document.createTextNode(horaTxt)
+        var horaEnv = document.createElement("span");
 
-        
 
-        horaEnv.append(horaNodo);
-        mensaje.append(enviado);
 
-        
+        document.getElementById("messagingArea").innerHTML += "<p>" + document.getElementById("mensaje").value + " " + "<font style='font-size:2vh'>" + horaTxt + "</font>" + "</p>";
 
-        document.getElementById("messagingArea").append(mensaje);
+
 
         document.getElementById("mensaje").value = "";
         mayus = 1
@@ -43,20 +43,19 @@ if(fechaControl==0){
 function mandarLetra(letra) {
     if (mayus == 0) {
         document.getElementById("mensaje").value = document.getElementById("mensaje").value + letra;
-    }
-
-    else if (mayus == 1) {
+        if (letra == ".") {
+            mayus = 1
+        }
+    } else if (mayus == 1) {
         document.getElementById("mensaje").value = document.getElementById("mensaje").value + letra.toUpperCase();
         mayus = 0
-    }
-
-    else if (mayus == 2) {
+    } else if (mayus == 2) {
         document.getElementById("mensaje").value = document.getElementById("mensaje").value + letra.toUpperCase();
     }
 }
 
 function saltoLinea() {
-    document.getElementById("mensaje").value = document.getElementById("mensaje").value + "\n";
+    document.getElementById("mensaje").value = document.getElementById("mensaje").value + "<br>";
 }
 
 function eliminarCaracter(a) {
@@ -64,8 +63,7 @@ function eliminarCaracter(a) {
 
     if (a == "delante") {
         document.getElementById("mensaje").value = texto.slice(0, -1);
-    }
-    else if (a == "atras") {
+    } else if (a == "atras") {
         document.getElementById("mensaje").value = texto.slice(1)
     };
 }
@@ -99,16 +97,17 @@ function mayuscula() {
     }
 }
 
-function verEmoji(){
+function verEmoji() {
     console.log("funciona")
-if (emoji==1){
-    document.getElementById("emojiArea").classList.remove('emojiAreaInv');
-    document.getElementById("emojiArea").classList.add('emojiAreaVis');
-    emoji = 0;
-}
-else if(emoji==0){
-    document.getElementById("emojiArea").classList.remove('emojiAreaVis');
-    document.getElementById("emojiArea").classList.add('emojiAreaInv');
-    emoji = 1;
-}
+    if (emoji == 1) {
+        document.getElementById("emojiArea").classList.remove('emojiAreaInv');
+        document.getElementById("emojiArea").classList.add('emojiAreaVis');
+        document.getElementById("emojiButton").value = "Txt"
+        emoji = 0;
+    } else if (emoji == 0) {
+        document.getElementById("emojiArea").classList.remove('emojiAreaVis');
+        document.getElementById("emojiArea").classList.add('emojiAreaInv');
+        document.getElementById("emojiButton").value = "☻"
+        emoji = 1;
+    }
 }
