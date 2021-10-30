@@ -1,15 +1,22 @@
+:root {
+    --msjArea: rgb(226, 226, 226);
+    --msjAreaP: rgb(238, 238, 238);
+    --msjAreaPBorder: #5f5f5f;
+    --mensajeBorde: #404040;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
 
 .grid-container {
-    grid-template-rows: 65vh 10vh 25vh;
+    grid-template-rows: 69vh 6vh 25vh;
     grid-template-columns: 100vw;
     display: grid;
     justify-content: center;
     align-items: start;
-    background-color: rgb(226, 226, 226);
+    background-color: var(--msjArea);
     border-radius: 5px;
 }
 
@@ -25,12 +32,12 @@ body {
     grid-template-columns: auto auto;
     margin-top: 5px;
     display: grid;
-    background-color: rgb(238, 238, 238);
+    background-color: var(--msjAreaP);
     justify-content: center;
     border-radius: 1vh;
     order: 1;
     box-sizing: content-box;
-    border: solid #5f5f5f 2px;
+    border: solid var(--msjAreaPBorder) 2px;
     padding: 5px;
     font-size: 3vh;
     font-family: 'Poppins', sans-serif;
@@ -48,7 +55,7 @@ body {
     width: 50vw;
     height: 5vh;
     resize: none;
-    border-color: #404040;
+    border-color: var(--mensajeBorde);
     border-width: 2px;
     border-radius: 15px;
     font-size: 5px;
